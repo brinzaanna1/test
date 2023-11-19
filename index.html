@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <style>
+    .content {
+      padding: 50px;
+    }
+
+
+    .content__circle {
+
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #5e5373;
+      position: relative;
+      animation-name: circle;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-play-state: running;
+      animation-delay: 2s;
+      animation-fill-mode: none;
+    }
+
+    /* .content__circle{
+animation: circle 1s linear infinite normal running 0s none;
+} */
+
+    .content:hover .content__circle {
+      animation-play-state: paused;
+    }
+
+    /* ключевые кадры */
+    @keyframes circle {
+
+      0% {
+        left: 0%;
+      }
+
+      50% {
+        border-radius: 0%;
+      }
+
+      100% {
+        left: 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <button class="content__btn">НАЖМИ</button>
+
+  <div class="content">
+    <div class="content__circle"></div>
+  </div>
+</body>
+
+</html>
